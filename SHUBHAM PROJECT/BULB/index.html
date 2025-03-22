@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bulb On/Off</title>
+</head>
+<style>
+    img{
+        position: absolute;
+        left: 300px;
+    }
+    button{
+        position: absolute;
+        left: 380px;
+        bottom: 50%;
+        background-color: red;
+    }
+</style>
+<body>
+    <img id="bulb" src="bulboff.jfif" alt="Bulb" height="250" width="220">
+    <br>
+    <button onclick="toggleBulb()">On/Off</button>
+
+    <script>
+        function toggleBulb() {
+            const bulb = document.getElementById('bulb');
+            if (bulb.src.includes('bulboff.jfif')) {
+                bulb.src = "bulbon.png";
+                let root = document.querySelector("html")
+                root.style.backgroundColor = "white";
+            } else {
+                bulb.src = 'bulboff.jfif';
+                root.style.backgroundColor = "black";
+
+            }
+        }
+    </script>
+
+
